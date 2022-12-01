@@ -4,7 +4,8 @@ dotenv.config();
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import morgan from 'morgan'
+import morgan from 'morgan';
+import routes from '../src/routes/index'
 
 
 //Middleware
@@ -15,13 +16,13 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(cookieParser());
 
-//Routes
-app.get('/', (req,res) => {
-    res.json({ msg: "Server is running" })
-});
+
 
 //Database
 import '../src/config/datbase';
+
+//Routes
+app.use('/api', routes.authRouter );
 
 
 // server listening 
