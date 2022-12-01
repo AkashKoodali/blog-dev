@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
     },
+    role: {
+        type: String,
+        default: "user" // admin
+    },
     type: {
         type: String,
         default: "normal" // fast
