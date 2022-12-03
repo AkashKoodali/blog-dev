@@ -1,4 +1,5 @@
 import React from 'react'
+import HomePageLayout from '../layout/HomePageLayout'
 
 function HomePage() {
   return (
@@ -8,4 +9,4 @@ function HomePage() {
   )
 }
 
-export default HomePage;
+export default HomePageLayout(HomePage);
